@@ -34,9 +34,8 @@ const Header = () => {
                 href="/"
                 className={`navbar-logo block w-full py-5`}
               >
-{/* Always use dark logo on white background */}
 <Image
-  src={`/images/logo/logo.svg`}
+  src={`/images/logo/1sapien-black-text.png`}
   alt="logo"
   width={pathUrl !== "/" ? 240 : 140}
   height={30}
