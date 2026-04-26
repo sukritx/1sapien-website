@@ -105,32 +105,28 @@ const Header = () => {
                              className="submenu relative left-0 top-full w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
                            >
 {menuItem?.submenu?.map((submenuItem: any, i) => (
-  submenuItem.isTitle ? (
-    <div
-      key={i}
-      className="block rounded px-4 py-[10px] text-sm flex items-center font-medium text-body-color"
-    >
-      {submenuItem.title}
-    </div>
-  ) : (
-    <Link
-      href={submenuItem.path}
-      key={i}
-      className={`block rounded px-4 py-[10px] text-sm flex items-center ${pathUrl === submenuItem.path
-        ? "text-primary"
-        : "text-body-color hover:text-primary"
-        }`}
-    >
-      <svg
-        className="w-2 h-2 mr-2 flex-shrink-0"
-        viewBox="0 0 4 4"
-        fill="currentColor"
+   submenuItem.isTitle ? (
+     <div
+       key={i}
+       className="block rounded px-4 py-[10px] text-sm flex items-center font-medium text-body-color"
+     >
+       {submenuItem.title}
+     </div>
+   ) : (
+      <Link
+        href={submenuItem.path}
+        key={i}
+        className={`block rounded px-4 py-[10px] text-sm flex items-center ${pathUrl === submenuItem.path
+          ? "text-primary"
+          : "text-body-color hover:text-primary"
+          }`}
       >
-        <circle cx="2" cy="2" r="1" />
-      </svg>
-      {submenuItem.title}
-    </Link>
-  )
+        <div className="flex flex-col">
+          <span className="text-sm">{submenuItem.title}</span>
+          {submenuItem.description && <span className="mt-0.5 block text-xs text-body-color">{submenuItem.description}</span>}
+        </div>
+      </Link>
+   )
 ))}
                           </div>
                         </li>
