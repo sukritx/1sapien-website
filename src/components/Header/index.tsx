@@ -68,7 +68,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 top-full z-30 w-[280px] rounded-b-lg border border-stroke bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 ${navbarOpen ? "visible opacity-100 shadow-lg" : "invisible opacity-0 lg:visible lg:opacity-100"}`}
+                  className={`navbar absolute right-0 top-full z-30 w-[280px] rounded-b-lg border border-stroke bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 ${navbarOpen ? "visible opacity-100" : "invisible opacity-0 lg:visible lg:opacity-100"}`}
                 >
                   <ul className="block lg:ml-8 lg:flex lg:gap-x-8 xl:ml-14 xl:gap-x-12">
                     {menuData.map((menuItem, index) =>
