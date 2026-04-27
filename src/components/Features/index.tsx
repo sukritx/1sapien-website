@@ -1,4 +1,3 @@
-import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
 
@@ -6,13 +5,16 @@ const Features = () => {
   return (
     <section className="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
       <div className="container">
-        <SectionTitle
-          subtitle="Our Services"
-          title="What We Do Best"
-          paragraph="We offer a complete range of web design and development services to help your business succeed online."
-        />
+        <div className="wow fadeInUp mx-auto mb-12 max-w-[700px] text-center lg:mb-20" data-wow-delay=".1s">
+          <h2 className="mb-3 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-4xl md:text-[48px] md:leading-[1.15]">
+            Simple systems that actually work
+          </h2>
+          <p className="text-lg font-medium text-body-color dark:text-dark-6 sm:text-xl">
+            No degrees required, just a hard hat
+          </p>
+        </div>
 
-        <div className="-mx-4 mt-12 flex flex-wrap lg:mt-20">
+        <div className="-mx-4 mt-12 flex flex-wrap justify-center lg:mt-20">
           {featuresData.map((feature, i) => (
             <SingleFeature key={i} feature={feature} />
           ))}
