@@ -9,6 +9,7 @@ import Process from "@/components/Process";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
+import { homePartnersData } from "@/components/Clients/homePartnersData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function Home() {
     <main>
       <ScrollUp />
       <Hero />
-      <Clients />
+      <Clients partnersData={homePartnersData} />
       <Features />
       <Process />
       <Testimonials />

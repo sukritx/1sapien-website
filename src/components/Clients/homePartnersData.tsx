@@ -1,5 +1,6 @@
 import { Client } from "@/types/client";
-export const clientsData: Client[] = [
+
+export const homePartnersData: Client[] = [
   {
     id: 1,
     title: "Stripe",
@@ -34,40 +35,5 @@ export const clientsData: Client[] = [
     logo: "/images/brands/google-business-profile.png",
     logoWhite: "/images/brands/google-business-profile.png",
     link: "https://business.google.com/",
-  },
-  {
-    id: 6,
-    title: "Zapier",
-    logo: "/images/brands/zapier.svg",
-    logoWhite: "/images/brands/zapier.svg",
-    link: "https://zapier.com/",
-  },
-  {
-    id: 7,
-    title: "Namecheap",
-    logo: "/images/brands/namecheap.svg",
-    logoWhite: "/images/brands/namecheap.svg",
-    link: "https://namecheap.com/",
-  },
-  {
-    id: 8,
-    title: "Mailgun",
-    logo: "/images/brands/mailgun.svg",
-    logoWhite: "/images/brands/mailgun.svg",
-    link: "https://mailgun.com/",
-  },
-  {
-    id: 9,
-    title: "Vercel",
-    logo: "/images/brands/vercel.svg",
-    logoWhite: "/images/brands/vercel.svg",
-    link: "https://vercel.com/",
-  },
-  {
-    id: 10,
-    title: "OpenAI",
-    logo: "/images/brands/openai.svg",
-    logoWhite: "/images/brands/openai.svg",
-    link: "https://openai.com/",
   },
 ];

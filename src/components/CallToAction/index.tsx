@@ -9,21 +9,16 @@ const CallToAction = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[570px] text-center">
                 <h2 className="mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
-                  <span>Ready to Build Your Website?</span>
-                  <span className="text-3xl font-normal md:text-[40px]">
-                    {" "}
-                    Get Started Now{" "}
-                  </span>
+                  <span>Want to schedule a time to talk?</span>
                 </h2>
                 <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                  Let us help you create a stunning online presence that
-                  drives growth and delivers results for your business.
+                  See everything we do to help you grow your business so you can implement it yourself or let us do it for you.
                 </p>
                 <Link
                   href="/contact"
                   className="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"
                 >
-                  Book a Consultation
+                  Book a Call
                 </Link>
               </div>
             </div>

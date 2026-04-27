@@ -41,7 +41,7 @@ const menuData: Menu[] = [
       path: undefined,
       newTab: false,
       submenu: [
-        { id: 1, title: "About Us", path: "/about-us", newTab: false, description: "Get to know 1Sapien" },
+        { id: 1, title: "About Us", path: "/about", newTab: false, description: "Get to know 1Sapien" },
         { id: 2, title: "Partners", path: "/partners", newTab: false, description: "Meet our partners" },
       ],
     },

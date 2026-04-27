@@ -1,7 +1,11 @@
 import SingleClient from "./SingleClient";
-import { clientsData } from "./clientsData";
+import { Client } from "@/types/client";
 
-const Clients = () => {
+interface ClientsProps {
+  partnersData: Client[];
+}
+
+const Clients = ({ partnersData }: ClientsProps) => {
   return (
     <section className="bg-gray-1 pb-16 pt-16 dark:bg-dark-2 lg:pb-20 lg:pt-20">
       <div className="container px-4">
@@ -9,7 +13,7 @@ const Clients = () => {
           Just so you know we're legit, we partner with…
         </p>
         <div className="-mx-4 flex flex-wrap items-center justify-center gap-8 xl:gap-11">
-          {clientsData.map((client, i) => (
+          {partnersData.map((client, i) => (
             <SingleClient key={i} client={client} />
           ))}
         </div>
