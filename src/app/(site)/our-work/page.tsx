@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CallToAction from "@/components/CallToAction";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -100,29 +101,7 @@ const OurWork = () => {
         </div>
       </section>
 
-      <section className="relative z-10 bg-primary py-20 lg:py-[100px]">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="mx-auto max-w-[500px] text-center lg:text-left">
-                <h2 className="mb-6 text-3xl font-bold text-white sm:text-4xl">
-                  Ready to Start Your Project?
-                </h2>
-                <p className="mb-9 text-base font-medium text-white/80">
-                  Let&apos;s discuss how we can help bring your vision to life
-                  with a website that drives real results.
-                </p>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2"
-                >
-                  Book a Consultation
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CallToAction />
     </>
   );
 };

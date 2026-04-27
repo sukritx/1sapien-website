@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Faq from "@/components/Faq";
 import Pricing from "@/components/Pricing";
+import CallToAction from "@/components/CallToAction";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ const PricingPage = () => {
       <Breadcrumb pageName="Pricing Page" />
       <Pricing />
       <Faq />
+      <CallToAction />
     </>
   );
 };

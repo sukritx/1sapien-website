@@ -1,12 +1,11 @@
 import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import Clients from "@/components/Clients";
 import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
+import CallToAction from "@/components/CallToAction";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Process from "@/components/Process";
-import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
 import { homePartnersData } from "@/components/Clients/homePartnersData";
@@ -29,9 +28,8 @@ export default function Home() {
       <Process />
       <Testimonials />
       <Faq />
-      <Team />
       <HomeBlogSection posts={posts} />
-      <Contact />
+      <CallToAction />
     </main>
   );
 }

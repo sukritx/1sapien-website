@@ -1,5 +1,6 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import CallToAction from "@/components/CallToAction";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
@@ -27,6 +28,8 @@ const Blog = () => {
           </div>
         </div>
       </section>
+
+      <CallToAction />
     </>
   );
 };
