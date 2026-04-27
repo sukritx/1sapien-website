@@ -19,9 +19,7 @@ const Hero = () => {
                   We Build Websites That Drive Results
                 </h1>
                 <p className="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-                  From stunning designs to seamless functionality, we craft
-                  digital experiences that help your business grow. Let us
-                  bring your vision to life.
+                  Marketing isn't a mystery. No agency... (including ours) has the magic solution to all your problems. We turn complexity into checklists. Work just got lighter.
                 </p>
                 <ul className="mb-10 flex flex-wrap items-center justify-center gap-5">
                   <li>
@@ -29,15 +27,7 @@ const Hero = () => {
                       href="/contact"
                       className="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2"
                     >
-                      Book a Consultation
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/our-work"
-                      className="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark"
-                    >
-                      View Our Work
+                      Book a Call
                     </Link>
                   </li>
                 </ul>
