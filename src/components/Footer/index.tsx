@@ -135,129 +135,88 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
-            <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-white">
-                Services
-              </h4>
-              <ul>
-                <li>
-                  <Link
-                    href="/products"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Web Design
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Web Development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    E-Commerce
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Digital Marketing
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
-            <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-white">
-                Resources
-              </h4>
-              <ul>
-                <li>
-                  <Link
-                    href="/blogs"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/pricing"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/our-work"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Case Studies
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
-            <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-white">
-                Support
-              </h4>
-              <ul>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Help Center
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Terms of Service
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
+             <div className="mb-10 w-full">
+               <h4 className="mb-9 text-lg font-semibold text-white">
+                 Resources
+               </h4>
+               <ul>
+                 <li>
+                   <Link
+                     href="/blogs"
+                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                   >
+                     Blog
+                   </Link>
+                 </li>
+                 <li>
+                   <Link
+                     href="/pricing"
+                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                   >
+                     Pricing
+                   </Link>
+                 </li>
+                 <li>
+                   <Link
+                     href="/our-work"
+                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                   >
+                     Our Work
+                   </Link>
+                 </li>
+                 <li>
+                   <Link
+                     href="/partners"
+                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                   >
+                     Partners
+                   </Link>
+                 </li>
+               </ul>
+             </div>
+           </div>
+           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
+             <div className="mb-10 w-full">
+               <h4 className="mb-9 text-lg font-semibold text-white">
+                 Legal
+               </h4>
+               <ul>
+                 <li>
+                   <Link
+                     href="/privacy"
+                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                   >
+                     Privacy Policy
+                   </Link>
+                 </li>
+                 <li>
+                   <Link
+                     href="/terms"
+                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                   >
+                     Terms of Service
+                   </Link>
+                 </li>
+               </ul>
+             </div>
+           </div>
+           <div className="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
+             <div className="mb-10 w-full">
+               <h4 className="mb-9 text-lg font-semibold text-white">
+                 Want to learn more about how we can help?
+               </h4>
+               <p className="mb-6 text-base text-gray-7">
+                 Book a free call with our team and discover how 1Sapien can grow your business online.
+               </p>
+               <Link
+                 href="/contact"
+                 className="inline-flex items-center justify-center rounded-lg bg-primary px-7 py-3 text-base font-medium text-white transition hover:bg-primary/90"
+               >
+                 Book a Call
+               </Link>
+             </div>
+           </div>
         </div>
       </div>
 
@@ -268,22 +227,16 @@ const Footer = () => {
               <div className="my-1">
                 <div className="-mx-3 flex items-center justify-center md:justify-start">
                   <Link
-                    href="#"
+                    href="/privacy"
                     className="px-3 text-base text-gray-7 hover:text-white hover:underline"
                   >
-                    Privacy policy
+                    Privacy Policy
                   </Link>
                   <Link
-                    href="#"
+                    href="/terms"
                     className="px-3 text-base text-gray-7 hover:text-white hover:underline"
                   >
-                    Legal notice
-                  </Link>
-                  <Link
-                    href="#"
-                    className="px-3 text-base text-gray-7 hover:text-white hover:underline"
-                  >
-                    Terms of service
+                    Terms of Service
                   </Link>
                 </div>
               </div>
