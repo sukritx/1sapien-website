@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 const PartnersPage = () => {
   return (
     <main>
-      <Breadcrumb pageName="Partners Page" />
       <Clients partnersData={clientsData} />
       <CallToAction />
     </main>

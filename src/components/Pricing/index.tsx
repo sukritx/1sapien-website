@@ -7,14 +7,14 @@ const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="relative z-20 overflow-hidden bg-white pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]"
+      className="relative z-20 overflow-hidden bg-white pb-12 pt-28 dark:bg-dark lg:pb-[90px] lg:pt-[150px]"
     >
       <div className="container">
         <div className="mb-[60px]">
           <SectionTitle
-            subtitle="Pricing Table"
-            title="Our Pricing Plan"
-            paragraph="Choose the right plan for your business. We offer flexible pricing to match your needs and budget."
+            subtitle=""
+            title="Our Pricing"
+            paragraph=""
             center
           />
         </div>

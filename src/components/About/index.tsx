@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="py-20 lg:py-[120px]">
+    <section className="pb-20 pt-28 lg:pb-[120px] lg:pt-[150px]">
       <div className="container">
         {/* Hero Mission Section */}
         <div className="mb-20">
