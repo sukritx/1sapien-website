@@ -4,34 +4,34 @@ import { useState } from "react";
 
 const faqData = [
   {
-    question: "How quickly can I get a functional website?",
+    question: "When am I going to start seeing results?",
     answer:
-      "We can get your functional website up and running within 1-2 weeks. It comes pre-loaded with lead capture, text-to-phone integration, and everything you need to start turning visitors into conversations.",
+      "This will completely depend on what else you're doing for advertising, how long you've been in business, the quality of your work, and of course that you commit to using our system. If you think you're going to close your eyes and pay us $297/month to solve all your problems, we're probably not the right fit for you. We cannot stress this enough... you have to be doing multiple forms of advertising. 1Sapien is meant to provide you a simple, yet extremely effective foundational marketing system to help grow and expand your business. We're here to build your online business foundation, not perform miracles.",
   },
   {
-    question: "What is a 5-Star Review Funnel?",
+    question: "Explain how you help me grow my business",
     answer:
-      "It's an automated system that follows up with your customers and gently nudges them to leave a review. People forget — we make sure they remember. After a few friendly reminders, those 5-star reviews start rolling in.",
+      "Sure...\n\n1. Do you believe having more 5 star reviews will attract more customers?\n\n2. Do you believe that being able to be found online and having a professional website that actually works will help you convert more leads into paying customers?\n\n3. Do you believe that instantly following up with incoming leads will make you look more professional, therefore leading to more business?\n\n4. Do you believe making sure you're making the most of every customer you work with by putting them into automated re-marketing campaigns will make them more likely to work with you again?\n\n5. Do you believe offering discounts for friends of your past customers will increase the number of referrals you get?\n\n6. Do you believe using automation and AI could free you from repeating the same basic tasks in your business, therefore giving you more time for other things?\n\n7. Do you believe having these systems in place is important to grow your business?\n\nIf you believe any of those things can grow your business, that's exactly what we can help you with.",
   },
   {
-    question: "How does Missed Call Text Back work?",
+    question: "Why is your pricing so cheap?",
     answer:
-      "When you miss a call, our system automatically sends a text message to the caller within seconds. Something like: 'Hey, sorry we missed your call! How can we help?' It's simple, and it means you never lose a lead to a missed call again.",
+      "Our only interest is keeping you for 10+ years. We believe the best way to do that is to be priced affordably. We believe if we don't overcharge and provide you with excellent service, you'll never have a reason to leave.",
   },
   {
-    question: "What are One-Click Marketing Campaigns?",
+    question: "What happens if I decide to cancel my membership?",
     answer:
-      "We set up pre-built marketing campaigns (referrals, repeat customers, promotions) that you can launch with a single click. No marketing degree required — just click and go.",
+      "We'll be extremely sad to see you go, but after a good cry we'll bounce back. However, you will lose access to all the features we set up for you.",
   },
   {
-    question: "How long does SEO actually take?",
+    question: "Can people find my website on Google?",
     answer:
-      "Honestly? It takes time. Anyone who tells you they can rank you #1 in a week is lying. Real local SEO typically takes 3-6 months to show meaningful results, but the long-term payoff is worth it. We focus on sustainable growth, not shortcuts.",
+      "We make sure every 1Sapien website is set up for Google with the best SEO practices. This includes keyword research, adding alt tags, meta tags, and header titles, securing an SSL certificate, optimizing for a high Google Speed test score, and providing regular updates. Your Google ranking will depend on how long your site's been live, local competition, and factors like your Google My Business reviews. We also offer blogging to boost your content. While we don't handle off-page backlinks beyond your social media, our ongoing updates keep your site in great shape — unlike some developers who set up your site and then forget about it.",
   },
   {
-    question: "Do I need to be tech-savvy to use this?",
+    question: "Why should I spend on a website when word of mouth is already pulling in business?",
     answer:
-      "Not at all. That's the whole point. We build simple systems that actually work. If you can send a text message, you can use our platform. No degrees required, just a hard hat.",
+      "We might be a bit biased, but here's the deal: if each of your customers brings in about $500 a year, getting just 2-4 new customers from your website will pay off. We know you'll see great value from your site. It will help you attract new customers, make it easier for existing customers to refer you, allow you to run ads if you want, and attract bigger clients who value professionalism.",
   },
 ];
 
@@ -76,10 +76,10 @@ const SingleFaq = ({
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? "max-h-96 pb-6" : "max-h-0"
+          isOpen ? "max-h-[800px] pb-6" : "max-h-0"
         }`}
       >
-        <p className="text-base leading-relaxed text-body-color dark:text-dark-6">
+        <p className="whitespace-pre-line text-base leading-relaxed text-body-color dark:text-dark-6">
           {answer}
         </p>
       </div>
