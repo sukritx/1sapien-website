@@ -1,6 +1,5 @@
 import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import Clients from "@/components/Clients";
-import ScrollUp from "@/components/Common/ScrollUp";
 import CallToAction from "@/components/CallToAction";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
@@ -21,7 +20,6 @@ export default function Home() {
 
   return (
     <main>
-      <ScrollUp />
       <Hero />
       <Clients partnersData={homePartnersData} />
       <Features />
