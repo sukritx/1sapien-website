@@ -1,13 +1,12 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 import CallToAction from "@/components/CallToAction";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Blog Grids | Play SaaS Starter Kit and Boilerplate for Next.js",
-  description: "Blog grids page description",
+    "1Sapien Blog - Latest Articles on helping small businesses generate more revenue",
+  description: "Discover the latest insights, tips, and strategies for helping small businesses generate more revenue on the 1Sapien Blog. Stay updated with our expert articles and success stories to boost your business growth.",
 };
 
 const Blog = () => {
@@ -15,8 +14,6 @@ const Blog = () => {
 
   return (
     <>
-      <Breadcrumb pageName="Blog Grids" />
-
       <section className="pb-10 pt-20 lg:pb-20 lg:pt-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">

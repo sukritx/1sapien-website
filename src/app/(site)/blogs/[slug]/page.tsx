@@ -1,7 +1,6 @@
 import Newsletter from "@/components/Blog/Newsletter";
 import PopularArticle from "@/components/Blog/PopularArticle";
 import SingleBlog from "@/components/Blog/SingleBlog";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 import CallToAction from "@/components/CallToAction";
 import { getAllPosts, getPostBySlug } from "@/utils/markdown";
 import markdownToHtml from "@/utils/markdownToHtml";
@@ -78,8 +77,6 @@ export default async function Post({ params }: Props) {
 
   return (
     <>
-      <Breadcrumb pageName="Blog Details" />
-
       <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
