@@ -5,28 +5,28 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Sabo Masties",
-    designation: "Founder @ Rolex",
+    name: "Adam",
+    designation: "Contractor",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Highly recommended, they are here to help us contractors that don't like to deal with the website stuff. It feels like you have a partner looking out for you that's actually helping you succeed.",
     image: "/images/testimonials/author-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Margin Gesmu",
-    designation: "Founder @ UI Hunter",
+    name: "Armando",
+    designation: "Business Owner",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "They are the absolute best at what they do. They built me a new website and within 10 days I got my first unpaid for lead! Best money spent with Phu and 1Sapien.",
     image: "/images/testimonials/author-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "William Smith",
-    designation: "Founder @ Trorex",
+    name: "Lopaka",
+    designation: "Business Owner",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Before I started working with 1Sapien I was paying $1500/month with another service that just was not working for me. 1Sapien is super affordable and made getting 5 star Google reviews easy with their 5 star Google review funnel!",
     image: "/images/testimonials/author-03.png",
     star: 5,
   },
@@ -38,8 +38,8 @@ const Testimonials = () => {
       <div className="container px-4">
         <SectionTitle
           subtitle="Testimonials"
-          title="What our Client Say"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="The Proof Is in the Pudding..."
+          paragraph="Let's see what our clients have to say"
           width="640px"
           center
         />
