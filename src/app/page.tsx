@@ -24,7 +24,6 @@ export default function Home() {
       <Clients partnersData={homePartnersData} />
       <Features />
       <Process />
-      <Testimonials />
       <Faq />
       <HomeBlogSection posts={posts} />
       <CallToAction />
