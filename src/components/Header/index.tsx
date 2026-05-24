@@ -140,12 +140,6 @@ const Header = () => {
                   </ul>
                   <div className="mt-4 flex flex-col gap-3 border-t border-stroke pt-4 lg:hidden">
                     <Link
-                      href="https://app.1sapien.com"
-                      className="px-4 py-3 text-center text-base font-medium text-dark hover:opacity-70"
-                    >
-                      Sign In
-                    </Link>
-                    <Link
                       href="/contact"
                       onClick={navbarToggleHandler}
                       className="rounded-lg bg-primary px-6 py-3 text-center text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90"
@@ -156,12 +150,6 @@ const Header = () => {
                 </nav>
               </div>
               <div className="hidden items-center justify-end pr-16 sm:flex lg:pr-0">
-                <Link
-                  href="https://app.1sapien.com"
-                  className="px-7 py-3 text-base font-medium text-dark hover:opacity-70"
-                >
-                  Sign In
-                </Link>
                 <Link
                   href="/contact"
                   className="rounded-lg bg-primary px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90"
