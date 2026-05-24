@@ -1,4 +1,57 @@
+"use client";
+
+import { useState, FormEvent } from "react";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    try {
+      await fetch(
+        "https://1sapien.com/webhooks/workflows/381ad96a-f4d2-4a61-a41a-e53fe07d4bdd/d86ff8c8-dbec-4ed3-b6de-13d5907c660f",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
+      setSubmitted(true);
+    } catch {
+      // silently fail
+    }
+  };
+
+  if (submitted) {
+    return (
+      <section id="contact" className="relative py-20 md:py-[120px]">
+        <div className="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
+        <div className="absolute left-0 top-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
+        <div className="container px-4">
+          <div className="mx-auto max-w-[520px] text-center">
+            <h2 className="mb-6 text-[35px] font-semibold leading-[1.14] text-dark dark:text-white">
+              Thank You!
+            </h2>
+            <p className="text-base text-body-color dark:text-dark-6">
+              Your message has been received. We&apos;ll get back to you shortly.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="contact" className="relative py-20 md:py-[120px]">
       <div className="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
@@ -72,18 +125,36 @@ const Contact = () => {
               <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
                 Send us a Message
               </h3>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-[22px]">
                   <label
-                    htmlFor="fullName"
+                    htmlFor="firstName"
                     className="mb-4 block text-sm text-body-color dark:text-dark-6"
                   >
-                    Full Name*
+                    First Name*
                   </label>
                   <input
                     type="text"
-                    name="fullName"
-                    placeholder="Adam Gelius"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    placeholder="Adam"
+                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                  />
+                </div>
+                <div className="mb-[22px]">
+                  <label
+                    htmlFor="lastName"
+                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
+                  >
+                    Last Name*
+                  </label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    placeholder="Gelius"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
                 </div>
@@ -97,21 +168,25 @@ const Contact = () => {
                   <input
                     type="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="example@yourmail.com"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
                 </div>
                 <div className="mb-[22px]">
                   <label
-                    htmlFor="phone"
+                    htmlFor="company"
                     className="mb-4 block text-sm text-body-color dark:text-dark-6"
                   >
-                    Phone*
+                    Company Name*
                   </label>
                   <input
                     type="text"
-                    name="phone"
-                    placeholder="+885 1254 5211 552"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    placeholder="Your company"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
                 </div>
@@ -120,12 +195,14 @@ const Contact = () => {
                     htmlFor="message"
                     className="mb-4 block text-sm text-body-color dark:text-dark-6"
                   >
-                    Message*
+                    Message / Need / Project Details*
                   </label>
                   <textarea
                     name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={1}
-                    placeholder="type your message here"
+                    placeholder="Tell us about your project..."
                     className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   ></textarea>
                 </div>
