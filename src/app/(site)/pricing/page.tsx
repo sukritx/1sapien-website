@@ -8,6 +8,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pricing | 1Sapien",
   description: "Explore our pricing plans for web design and development services.",
+  alternates: {
+    canonical: "https://1sapien.com/pricing",
+  },
 };
 
 const PricingPage = () => {

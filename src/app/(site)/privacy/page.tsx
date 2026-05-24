@@ -3,6 +3,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | 1Sapien",
   description: "Privacy Policy for 1Sapien Company - learn how we collect, use, and protect your personal data.",
+  alternates: {
+    canonical: "https://1sapien.com/privacy",
+  },
 };
 
 const PrivacyPage = () => {

@@ -3,6 +3,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms & Conditions | 1Sapien",
   description: "Terms and Conditions for 1Sapien Company A2P 10DLC messaging services and subscription plans.",
+  alternates: {
+    canonical: "https://1sapien.com/terms",
+  },
 };
 
 const TermsPage = () => {

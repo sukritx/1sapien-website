@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
 
   const posts = getAllPosts(["title", "date", "excerpt", "coverImage", "slug"]);
-  const post = getPostBySlug(slug, ["title", "author", "content", "metadata"]);
+  const post = getPostBySlug(slug, ["title", "author", "content", "metadata", "excerpt"]);
 
   const siteName = process.env.SITE_NAME || "Your Site Name";
   const authorName = process.env.AUTHOR_NAME || "Your Author Name";
@@ -24,7 +24,11 @@ export async function generateMetadata({ params }: Props) {
   if (post) {
     const metadata = {
       title: `${post.title || "Single Post Page"} | ${siteName}`,
+      description: post.excerpt || "",
       author: authorName,
+      alternates: {
+        canonical: `https://1sapien.com/blogs/${slug}`,
+      },
       robots: {
         index: true,
         follow: true,
@@ -75,8 +79,33 @@ export default async function Post({ params }: Props) {
 
   const content = await markdownToHtml(post.content || "");
 
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt || "",
+    image: post.coverImage,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "1Sapien",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://1sapien.com/blogs/${slug}`,
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+      />
       <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
@@ -87,7 +116,7 @@ export default async function Post({ params }: Props) {
               >
                 <Image
                   src={post.coverImage}
-                  alt="image"
+                  alt={post.title || "Blog post cover image"}
                   width={1288}
                   height={500}
                   className="h-full w-full object-cover object-center"
@@ -98,7 +127,7 @@ export default async function Post({ params }: Props) {
                       <div className="mr-4 h-10 w-10 overflow-hidden rounded-full">
                         <Image
                           src={post.authorImage}
-                          alt="image"
+                          alt={post.author || "Author"}
                           className="w-full"
                           width={40}
                           height={40}
@@ -201,7 +230,7 @@ export default async function Post({ params }: Props) {
                     >
                       <Image
                         src="/images/blog/bannder-ad.png"
-                        alt="image"
+                        alt="1Sapien promotional banner"
                         className="w-full"
                         width={408}
                         height={254}

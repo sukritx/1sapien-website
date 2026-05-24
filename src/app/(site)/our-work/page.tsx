@@ -6,6 +6,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Work - 1Sapien",
   description: "Explore our portfolio of websites and digital experiences we've built for our clients.",
+  alternates: {
+    canonical: "https://1sapien.com/our-work",
+  },
 };
 
 const projects = [
