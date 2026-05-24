@@ -25,7 +25,6 @@ export default function Home() {
       <Features />
       <Process />
       <Faq />
-      <HomeBlogSection posts={posts} />
       <CallToAction />
     </main>
   );
