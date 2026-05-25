@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import toast from "react-hot-toast";
 
 const Hero = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const Hero = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,18 +20,29 @@ const Hero = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
+    if (!formData.firstName || !formData.lastName || !formData.email) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+
+    setSubmitting(true);
+
     try {
-      await fetch(
-        "https://1sapien.com/webhooks/workflows/381ad96a-f4d2-4a61-a41a-e53fe07d4bdd/d86ff8c8-dbec-4ed3-b6de-13d5907c660f",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const res = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Submission failed");
+
+      setSubmitting(false);
       setSubmitted(true);
+      toast.success("Message sent successfully!");
     } catch {
-      // silently fail
+      setSubmitting(false);
+      toast.error("Failed to send message. Please try again.");
     }
   };
 
@@ -166,9 +179,10 @@ const Hero = () => {
                     <div className="mb-0">
                       <button
                         type="submit"
-                        className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90"
+                        disabled={submitting}
+                        className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60"
                       >
-                        Send
+                        {submitting ? "Sending..." : "Send"}
                       </button>
                     </div>
                   </form>
