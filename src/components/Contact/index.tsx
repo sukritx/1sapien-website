@@ -20,7 +20,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       await fetch(
-        "https://1sapien.com/webhooks/workflows/381ad96a-f4d2-4a61-a41a-e53fe07d4bdd/d86ff8c8-dbec-4ed3-b6de-13d5907c660f",
+        "https://crm.1sapien.com/webhooks/workflows/381ad96a-f4d2-4a61-a41a-e53fe07d4bdd/d86ff8c8-dbec-4ed3-b6de-13d5907c660f",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
