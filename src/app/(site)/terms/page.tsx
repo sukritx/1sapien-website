@@ -77,13 +77,16 @@ const TermsPage = () => {
             </p>
 
             <h2 className="text-2xl font-bold text-dark dark:text-white">Subscription Plans and Billing</h2>
-            <p>1Sapien Company offers two primary subscription plans:</p>
+            <p>1Sapien Company offers three primary subscription plans:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>$297/month:</strong> Includes a fully built website, access to the 1Sapien platform (web and mobile app), a business phone number for texting and calling, CRM access, automations, remarketing, and customer review tools.
+                <strong>Starter - $99/month:</strong> For businesses with less than 50 new customers per month. Includes automated review requests, text &amp; email campaigns, personalized image requests, social review sharing, AI review responses, and custom integration.
               </li>
               <li>
-                <strong>$750/month:</strong> Includes all features from the $297 plan plus full management and optimization of Google Local Service Ads.
+                <strong>Standard - $179/month:</strong> For businesses with 50-100 new customers per month. Includes all features of Starter, scaled for higher volume.
+              </li>
+              <li>
+                <strong>Scale - $279/month:</strong> For businesses with 100-300 new customers per month. Includes all features of Standard, scaled for high volume.
               </li>
             </ul>
             <p>
