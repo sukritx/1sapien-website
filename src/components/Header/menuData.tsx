@@ -3,7 +3,7 @@ import { Menu } from "@/types/menu";
 const menuData: Menu[] = [
   {
     id: 1,
-    title: "Products",
+    title: "Solutions",
     path: undefined,
     newTab: false,
     submenu: [
@@ -15,6 +15,7 @@ const menuData: Menu[] = [
       { id: 6, title: "5-Star Magic Review Funnel", path: "/products/5-star-magic-review-funnel", newTab: false, description: "Get more 5 star reviews and prevent bad ones" },
       { id: 7, title: "One-Click Marketing Campaigns", path: "/products/one-click-marketing-campaigns", newTab: false, description: "Keep your customers thinking about you" },
       { id: 8, title: "Automated Lead Follow Up", path: "/products/automated-lead-follow-up", newTab: false, description: "Automatically follow up with leads via text" },
+      { id: 9, title: "AI Agents", path: "/products/ai-agents", newTab: false, description: "Intelligent AI agents for your business" },
     ],
   },
   {
