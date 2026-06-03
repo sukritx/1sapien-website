@@ -52,7 +52,7 @@ const Hero = () => {
         id="home"
         className="relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]"
         style={{
-          backgroundImage: "url(/images/hero/hero-image-1.jpg)",
+          backgroundImage: "url(/images/hero/hero-image.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
