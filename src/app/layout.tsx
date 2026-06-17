@@ -47,7 +47,9 @@ export default function RootLayout({
           <div className="isolate">
             <Header />
 
-            {children}
+            <div className="pt-[100px] lg:pt-[120px]">
+              {children}
+            </div>
 
             <Footer />
             <ScrollToTop />

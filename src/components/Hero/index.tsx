@@ -1,317 +1,109 @@
-"use client";
-
-import { useState, FormEvent } from "react";
-import toast from "react-hot-toast";
-
 const Hero = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-
-    if (!formData.firstName || !formData.lastName || !formData.email) {
-      toast.error("Please fill in all required fields.");
-      return;
-    }
-
-    setSubmitting(true);
-
-    try {
-      const res = await fetch("/api/submit-form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (!res.ok) throw new Error("Submission failed");
-
-      setSubmitting(false);
-      setSubmitted(true);
-      toast.success("Message sent successfully!");
-    } catch {
-      setSubmitting(false);
-      toast.error("Failed to send message. Please try again.");
-    }
-  };
-
   return (
-    <>
-      <section
-        id="home"
-        className="relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]"
-        style={{
-          backgroundImage: "url(/images/hero/hero-image.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/50" />
+    <section className="relative py-12 sm:py-16 lg:pb-40">
+      <div className="absolute bottom-0 right-0 overflow-hidden">
+        <img
+          className="w-full h-auto origin-bottom-right transform scale-150 lg:w-auto lg:mx-auto lg:object-cover lg:scale-75"
+          src="https://cdn.rareblocks.xyz/collection/clarity/images/hero/1/background-pattern.png"
+          alt=""
+        />
+      </div>
 
-        <div className="container relative z-10">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
-              <div
-                className="hero-content wow fadeInUp max-w-[600px]"
-                data-wow-delay=".2s"
-              >
-                <h1 className="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
-                  We Build Websites & Marketing Systems That Drive Results
-                </h1>
-                <p className="mb-9 text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-                  Marketing isn&apos;t a mystery. No agency... (including ours) has the magic solution to all your problems. We turn complexity into checklists. Work just got lighter.
+      <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-y-4 lg:items-center lg:grid-cols-2 xl:grid-cols-2">
+          <div className="text-center xl:col-span-1 lg:text-left md:px-16 lg:px-0 xl:pr-20">
+            <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">
+              System to drive real business outcomes
+            </h1>
+            <p className="mt-2 text-lg text-gray-600 sm:mt-6 font-inter">
+              1Sapien take care of your online presence, so you can focus on your business.
+            </p>
+
+            <a
+              href="#"
+              title=""
+              className="inline-flex px-8 py-4 mt-8 text-lg font-bold text-white transition-all duration-200 bg-gray-900 border border-transparent rounded sm:mt-10 font-pj hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+              role="button"
+            >
+              Book a call
+            </a>
+
+            <div className="mt-8 sm:mt-16">
+              <div className="flex items-center justify-center lg:justify-start">
+                <svg
+                  className="w-5 h-5 text-[#FDB241]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg
+                  className="w-5 h-5 text-[#FDB241]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg
+                  className="w-5 h-5 text-[#FDB241]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg
+                  className="w-5 h-5 text-[#FDB241]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <svg
+                  className="w-5 h-5 text-[#FDB241]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              </div>
+
+              <blockquote className="mt-6">
+                <p className="text-lg font-bold text-gray-900 font-pj">
+                  Best code editor in market!
                 </p>
+                <p className="mt-3 text-base leading-7 text-gray-600 font-inter">
+                  Consectetur adipiscing elit. Vehicula massa in enim luctus. Rutrum arcu, aliquam nulla tincidunt gravida. Cursus convallis dolor semper pretium ornare.
+                </p>
+              </blockquote>
 
+              <div className="flex items-center justify-center mt-3 lg:justify-start">
+                <img
+                  className="flex-shrink-0 object-cover w-6 h-6 overflow-hidden rounded-full"
+                  src="https://cdn.rareblocks.xyz/collection/clarity/images/hero/1/avatar-female.png"
+                  alt=""
+                />
+                <p className="ml-2 text-base font-bold text-gray-900 font-pj">
+                  Denny Jones
+                </p>
               </div>
             </div>
+          </div>
 
-            <div className="w-full px-4 pb-12 lg:w-1/2 lg:pb-20">
-              {submitted ? (
-                <div className="rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]">
-                  <h2 className="mb-6 text-center text-[35px] font-semibold leading-[1.14] text-dark dark:text-white">
-                    Thank You!
-                  </h2>
-                  <p className="text-center text-base text-body-color dark:text-dark-6">
-                    Your message has been received. We&apos;ll get back to you shortly.
-                  </p>
-                </div>
-              ) : (
-                <div
-                  className="wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
-                  data-wow-delay=".2s"
-                >
-                  <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
-                    Send us a Message
-                  </h3>
-                  <form onSubmit={handleSubmit}>
-                    <div className="mb-[22px]">
-                      <label
-                        htmlFor="firstName"
-                        className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                      >
-                        First Name*
-                      </label>
-                      <input
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        placeholder="Adam"
-                        className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                      />
-                    </div>
-                    <div className="mb-[22px]">
-                      <label
-                        htmlFor="lastName"
-                        className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                      >
-                        Last Name*
-                      </label>
-                      <input
-                        type="text"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        placeholder="Gelius"
-                        className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                      />
-                    </div>
-                    <div className="mb-[22px]">
-                      <label
-                        htmlFor="email"
-                        className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                      >
-                        Email*
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="example@yourmail.com"
-                        className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                      />
-                    </div>
-                    <div className="mb-[22px]">
-                      <label
-                        htmlFor="company"
-                        className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                      >
-                        Company Name*
-                      </label>
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        placeholder="Your company"
-                        className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                      />
-                    </div>
-                    <div className="mb-[30px]">
-                      <label
-                        htmlFor="message"
-                        className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                      >
-                        Message / Need / Project Details*
-                      </label>
-                      <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows={1}
-                        placeholder="Tell us about your project..."
-                        className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                      ></textarea>
-                    </div>
-                    <div className="mb-0">
-                      <button
-                        type="submit"
-                        disabled={submitting}
-                        className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60"
-                      >
-                        {submitting ? "Sending..." : "Send"}
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              )}
-            </div>
+          <div className="xl:col-span-1">
+            <img
+              className="w-full mx-auto"
+              src="https://cdn.rareblocks.xyz/collection/clarity/images/hero/1/illustration.png"
+              alt=""
+            />
           </div>
         </div>
-
-        <div>
-          <span className="absolute left-0 top-0 z-[-1]">
-            <svg
-              width="485"
-              height="470"
-              viewBox="0 0 485 470"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 0 466)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 70 410)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 20 350)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 430 466)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 360 410)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 410 350)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-            </svg>
-          </span>
-          <span className="absolute right-0 bottom-0 z-[-1]">
-            <svg
-              width="485"
-              height="470"
-              viewBox="0 0 485 470"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 0 466)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 70 410)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 20 350)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 430 466)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 360 410)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-              <circle
-                cx="10"
-                cy="10"
-                r="10"
-                transform="matrix(1 0 0 -1 410 350)"
-                fill="white"
-                fillOpacity="0.06"
-              />
-            </svg>
-          </span>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
