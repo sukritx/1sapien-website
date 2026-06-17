@@ -7,7 +7,6 @@ import Hero from "@/components/Hero";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
-import { homePartnersData } from "@/components/Clients/homePartnersData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -54,7 +53,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Hero />
-      <Clients partnersData={homePartnersData} />
+      <Clients />
       <Features />
       <Process />
       <Faq />

@@ -1,7 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Clients from "@/components/Clients";
 import CallToAction from "@/components/CallToAction";
-import { clientsData } from "@/components/Clients/clientsData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
 const PartnersPage = () => {
   return (
     <main>
-      <Clients partnersData={clientsData} />
+      <Clients />
       <CallToAction />
     </main>
   );
