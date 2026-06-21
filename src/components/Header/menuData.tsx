@@ -3,19 +3,13 @@ import { Menu } from "@/types/menu";
 const menuData: Menu[] = [
   {
     id: 1,
-    title: "Solutions",
+    title: "Services",
     path: undefined,
     newTab: false,
     submenu: [
-      { id: 1, title: "Systems & Features", path: undefined, newTab: false, isTitle: true },
-      { id: 2, title: "Functional Website", path: "/products/functional-website", newTab: false, description: "Get a lead-generating Website in just days" },
-      { id: 3, title: "Missed Call Text Back", path: "/products/missed-call-text-back", newTab: false, description: "Automatically text back missed calls" },
-      { id: 4, title: "Business Phone", path: "/products/business-phone", newTab: false, description: "Separate business and personal" },
-      { id: 5, title: "Local SEO", path: "/products/local-seo", newTab: false, description: "Actually get found on Google" },
-      { id: 6, title: "5-Star Magic Review Funnel", path: "/products/5-star-magic-review-funnel", newTab: false, description: "Get more 5 star reviews and prevent bad ones" },
-      { id: 7, title: "One-Click Marketing Campaigns", path: "/products/one-click-marketing-campaigns", newTab: false, description: "Keep your customers thinking about you" },
-      { id: 8, title: "Automated Lead Follow Up", path: "/products/automated-lead-follow-up", newTab: false, description: "Automatically follow up with leads via text" },
-      { id: 9, title: "AI Agents", path: "/products/ai-agents", newTab: false, description: "Intelligent AI agents for your business" },
+      { id: 1, title: "Smart Website", path: "/products/smart-website", newTab: false, description: "Taylor-made website optimized for conversions" },
+      { id: 2, title: "Local Rank Up", path: "/products/local-rank-up", newTab: false, description: "Dominate local search results" },
+      { id: 3, title: "Reviews", path: "/products/reviews", newTab: false, description: "Get more 5-star reviews and manage reputation" },
     ],
   },
   {

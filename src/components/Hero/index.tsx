@@ -13,10 +13,10 @@ const Hero = () => {
         <div className="grid grid-cols-1 gap-y-4 lg:items-center lg:grid-cols-2 xl:grid-cols-2">
           <div className="text-center xl:col-span-1 lg:text-left md:px-16 lg:px-0 xl:pr-20">
             <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">
-              System to drive real business outcomes
+              Website and Review System for Businesses Ready to Grow
             </h1>
             <p className="mt-2 text-lg text-gray-600 sm:mt-6 font-inter">
-              1Sapien take care of your online presence, so you can focus on your business.
+              Grow your online reputation with automated Google review solutions designed to bring in more customers, build trust, and drive business success.
             </p>
 
             <a
