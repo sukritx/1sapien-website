@@ -13,7 +13,11 @@ const Hero = () => {
         <div className="grid grid-cols-1 gap-y-4 lg:items-center lg:grid-cols-2 xl:grid-cols-2">
           <div className="text-center xl:col-span-1 lg:text-left md:px-16 lg:px-0 xl:pr-20">
             <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight font-pj">
+<<<<<<< HEAD
               Website and Review System for Businesses Ready to Grow
+=======
+              Get More Reviews, Rank Higher, Grow Faster
+>>>>>>> e9e978d2e7687fed7bc1f2a64a7e3368dabeeb74
             </h1>
             <p className="mt-2 text-lg text-gray-600 sm:mt-6 font-inter">
               Grow your online reputation with automated Google review solutions designed to bring in more customers, build trust, and drive business success.
@@ -74,10 +78,10 @@ const Hero = () => {
 
               <blockquote className="mt-6">
                 <p className="text-lg font-bold text-gray-900 font-pj">
-                  Best code editor in market!
+                  Best reputation management system in the market.
                 </p>
                 <p className="mt-3 text-base leading-7 text-gray-600 font-inter">
-                  Consectetur adipiscing elit. Vehicula massa in enim luctus. Rutrum arcu, aliquam nulla tincidunt gravida. Cursus convallis dolor semper pretium ornare.
+                  "Since using this service, our Google reviews have skyrocketed! It's been a game-changer for our business."
                 </p>
               </blockquote>
 
